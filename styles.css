@@ -1,0 +1,115 @@
+:root {
+  --bg: #0f0f0f;
+  --text: #ffffff;
+  --card: #1a1a1a;
+  --accent: #4f9cff;
+}
+
+.light-mode {
+  --bg: #ffffff;
+  --text: #111;
+  --card: #f4f4f4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.3s ease;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Header */
+header {
+  padding: 20px 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: var(--text);
+  margin-left: 20px;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+nav a:hover {
+  opacity: 1;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+.hero button {
+  padding: 12px 25px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+/* Cards */
+.features {
+  display: flex;
+  gap: 20px;
+  padding: 60px 0;
+}
+
+.card {
+  flex: 1;
+  background: var(--card);
+  padding: 30px;
+  border-radius: 10px;
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+/* Animation class */
+.card.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.6;
+}
+
+/* Toggle button */
+.toggle {
+  cursor: pointer;
+  border: 1px solid var(--text);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
